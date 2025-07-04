@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics & Accessories - ShopEase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as index.html) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">SE</div>
+                    <span class="logo-text">ShopEase</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link active">Electronics</a>
+                    <a href="#" class="nav-link">Fashion</a>
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="action-btn" id="wishlistBtn">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge" id="wishlistCount">2</span>
+                    </button>
+                    <button class="action-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge" id="cartCount">0</span>
+                    </button>
+                    <button class="action-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Page Content -->
+    <div class="category-page">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Electronics & Accessories</span>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Electronics & Accessories</h1>
+                <p class="page-description">Discover our curated selection of quality electronics</p>
+            </div>
+
+            <div class="category-content">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <div class="filters-header">
+                        <h3>Filters</h3>
+                        <button class="filters-clear" id="clearFilters">Clear All</button>
+                    </div>
+
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" id="priceMin" min="0" max="500" value="0" class="range-slider">
+                            <input type="range" id="priceMax" min="0" max="500" value="500" class="range-slider">
+                            <div class="price-values">
+                                <span id="priceMinValue">$0</span>
+                                <span id="priceMaxValue">$500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brand Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Brand</h4>
+                        <div class="filter-options" id="brandFilters">
+                            <!-- Brand options will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <h4 class="filter-title">Rating</h4>
+                        <div class="filter-options" id="ratingFilters">
+                            <!-- Rating options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="products-main">
+                    <!-- Toolbar -->
+                    <div class="products-toolbar">
+                        <div class="toolbar-left">
+                            <span class="results-count" id="resultsCount">Showing 12 products</span>
+                            <button class="mobile-filters-btn" id="mobileFiltersBtn">
+                                <i class="fas fa-filter"></i> Filters
+                            </button>
+                        </div>
+                        <div class="toolbar-right">
+                            <select class="sort-select" id="sortSelect">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Highest Rated</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                            <div class="view-toggle">
+                                <button class="view-btn active" id="gridViewBtn" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" id="listViewBtn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-container" id="productsContainer">
+                        <!-- Products will be populated by JavaScript -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be populated by JavaScript -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Filters Modal -->
+    <div class="modal" id="filtersModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Filters</h3>
+                <button class="modal-close" id="closeFiltersModal">&times;</button>
+            </div>
+            <div class="modal-body" id="mobileFiltersContent">
+                <!-- Mobile filters content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="clearMobileFilters">Clear All</button>
+                <button class="btn btn-primary" id="applyMobileFilters">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Shopping Cart</h3>
+                <button class="modal-close" id="closeCartModal">&times;</button>
+            </div>
+            <div class="modal-body" id="cartItems"></div>
+            <div class="modal-footer">
+                <div class="cart-total" id="cartTotal">Total: $0.00</div>
+                <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <script src="category.js"></script>
+</body>
+</html>

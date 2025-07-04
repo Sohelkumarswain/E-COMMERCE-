@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ShopEase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">SE</div>
+                    <span class="logo-text">ShopEase</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Electronics</a>
+                    <a href="#" class="nav-link">Fashion</a>
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="#" class="nav-link active">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="action-btn" id="wishlistBtn">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge" id="wishlistCount">2</span>
+                    </button>
+                    <button class="action-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge" id="cartCount">0</span>
+                    </button>
+                    <button class="action-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Page Content -->
+    <div class="contact-page">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">💬 Get in Touch</h1>
+                <p class="page-description">Have questions, feedback, or product suggestions? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">
+                            <i class="fas fa-comments"></i>
+                            Contact Information
+                        </h3>
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <div class="detail-title">Email</div>
+                                    <div class="detail-value">support@shopease.com</div>
+                                    <div class="detail-note">We'll respond within 24 hours</div>
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <div class="detail-title">Phone</div>
+                                    <div class="detail-value">+1 (555) 123-4567</div>
+                                    <div class="detail-note">Mon-Fri, 9AM-6PM EST</div>
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <div class="detail-title">Address</div>
+                                    <div class="detail-value">
+                                        123 Commerce Street<br>
+                                        New York, NY 10001<br>
+                                        United States
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <div class="detail-title">Business Hours</div>
+                                    <div class="detail-value">
+                                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                        Saturday: 10:00 AM - 4:00 PM<br>
+                                        Sunday: Closed
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Quick Help</h3>
+                        <div class="quick-help">
+                            <div class="help-item">
+                                <div class="help-title">Order Status</div>
+                                <div class="help-description">Track your order or get delivery updates</div>
+                            </div>
+                            <div class="help-item">
+                                <div class="help-title">Returns & Exchanges</div>
+                                <div class="help-description">Easy returns within 30 days of purchase</div>
+                            </div>
+                            <div class="help-item">
+                                <div class="help-title">Product Questions</div>
+                                <div class="help-description">Get detailed information about our products</div>
+                            </div>
+                            <div class="help-item">
+                                <div class="help-title">Technical Support</div>
+                                <div class="help-description">Help with website issues or account problems</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Send us a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="order">Order Inquiry</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="return">Return/Exchange</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="feedback">Feedback/Suggestion</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="orderNumber">Order Number (If applicable)</label>
+                                <input type="text" id="orderNumber" name="orderNumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Please describe your question or concern in detail..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Frequently Asked Questions</h3>
+                        <div class="faq-list" id="faqList">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How long does shipping take?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    Most orders are delivered within 2-5 business days depending on your location. You'll receive tracking information once your order ships.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>What is your return policy?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    We offer a 30-day return policy for most items. Products must be in original condition with tags attached. Some restrictions may apply.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>Do you offer international shipping?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    Yes, we ship to over 25 countries worldwide. Shipping costs and delivery times vary by destination.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <span>How can I track my order?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    Once your order ships, you'll receive an email with tracking information. You can also check your order status in your account dashboard.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">SE</div>
+                        <span class="logo-text">ShopEase</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted online store for smart and simple shopping. Quality products, fast delivery, and 100% satisfaction guaranteed.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Home & Kitchen</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Fitness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@shopease.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New York, NY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShopEase. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
